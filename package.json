@@ -19,7 +19,7 @@
 		"installPeer": "node build-tool/peerDep.js",
 		"test": "jest",
 		"test:dev": "jest --watch",
-		"lint": "eslint src/**/*.{js,tsx,ts,jsx} --fix",
+		"lint": "eslint src/**/*.{js,tsx,ts} --fix",
 		"stylelint": "stylelint src/**/*.{ts,tsx,jsx,js,css,scss,less} --fix",
 		"commit": "git-cz",
 		"release": "standard-version",
