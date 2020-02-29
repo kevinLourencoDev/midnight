@@ -1,2 +1,1 @@
-export { default as Demo } from './Demo/Demo';
-export { default as TextInput } from './TextInput/TextInput';
+export { default as FormField } from './FormGroup/FormField/FormField';

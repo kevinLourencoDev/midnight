@@ -1,43 +1,43 @@
 import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
 import { action } from '@storybook/addon-actions';
-import TextInput from './TextInput';
+import FormField from './FormField';
 
-<Meta title='TextInput' component={TextInput} />
+<Meta title='FormField' component={FormField} />
 
 # Demo App
 
 ## Properties
 
-<Props of={TextInput} />
+<Props of={FormField} />
 
 ## Basic usage
 
 <Preview>
 	<Story name='text'>
-		<TextInput
+		<FormField
 			label='to'
 			name='field1'
-			type='text'
+			type='mail'
 			placeholder='Fill me'
 			required
-		></TextInput>
+		/>
 	</Story>
 	<Story name='password'>
-		<TextInput
+		<FormField
 			label='to'
 			name='field1'
 			type='password'
 			placeholder='&#8226;&#8226;&#8226;&#8226;&#8226;'
 			required
-		></TextInput>
+		/>
 	</Story>
 	<Story name='mail'>
-		<TextInput
+		<FormField
 			label='to'
 			name='field1'
 			type='mail'
 			placeholder='test@test.com'
 			required
-		></TextInput>
+		/>
 	</Story>
 </Preview>

@@ -5,25 +5,22 @@ import renderer from 'react-test-renderer';
 
 import '@testing-library/jest-dom/extend-expect';
 
-import Demo, { DemoProps } from '../Demo';
+import FormField from '../FormField';
 
 afterEach(cleanup);
 
 it('renders without crashing', () => {
 	const div: HTMLDivElement = document.createElement('div');
-	ReactDom.render(<Demo type='success' />, div);
+	ReactDom.render(<FormField />, div);
 	ReactDom.unmountComponentAtNode(div);
 });
 
 it('render Demo Component correctly', () => {
-	const props: DemoProps = {
-		type: 'success',
-	};
-	const { getByTestId } = render(<Demo {...props}>Hello World</Demo>);
+	const { getByTestId } = render(<FormField />);
 	expect(getByTestId('DemoMessage')).toHaveTextContent('Hello World');
 });
 
 it('matches snapshot', () => {
-	const tree = renderer.create(<Demo type={'danger'}>Errors</Demo>).toJSON();
+	const tree = renderer.create(<FormField />).toJSON();
 	expect(tree).toMatchSnapshot();
 });

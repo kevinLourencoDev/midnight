@@ -1,7 +1,7 @@
 {
-	"name": "midnight",
+	"name": "midnight_test",
 	"homepage": "http://klourencodev@gmail.com.github.io/midnight",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"description": "test",
 	"repository": {
 		"type": "git",
