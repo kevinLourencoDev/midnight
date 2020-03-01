@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 const StyledFromGroup = styled.div`
-	margin: 16px auto;
+	margin: 8px auto;
+	padding-bottom: 24px;
 `;
 
 const StyledText = styled.p`
@@ -18,15 +19,23 @@ const StyledLabel = styled.label`
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	margin-bottom: 6px;
+	color: #5e6c84;
 `;
 
 const StyledInput = styled.input`
-	width: 100%;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 4px;
+    border: solid 1px #d4ddf0;
+    color: #5e6c84;
 	font-size: 14px;
-	padding: 6px 8px;
-	border-width: 1px;
-	border-style: solid;
-	margin: 0;
-	box-sizing: border-box;
+	
+	&:focus {
+		outline: none;
+    	border-color: #8ec2ff;
+	}
+}
 `;
 export { StyledFromGroup, StyledText, StyledError, StyledInput, StyledLabel };

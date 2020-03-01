@@ -1,0 +1,25 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+import { action } from '@storybook/addon-actions';
+import FormField from './FormField';
+
+<Meta title='FormField' component={FormField} />
+
+# Demo App
+
+## Properties
+
+<Props of={FormField} />
+
+## Basic usage
+
+<Preview>
+	<Story name='mail'>
+		<FormField label='Votre email' name='field1' type='mail' required />
+	</Story>
+	<Story name='password'>
+		<FormField label='Mot de passe' name='field1' type='password' required />
+	</Story>
+	<Story name='text'>
+		<FormField label='Other type possible' name='field1' type='text' required />
+	</Story>
+</Preview>
