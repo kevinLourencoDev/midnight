@@ -1,4 +1,4 @@
-import React, { useState, SFC } from 'react';
+import React, { useState, SFC, useContext } from 'react';
 import { useId } from 'react-id-generator';
 
 import {
@@ -8,6 +8,7 @@ import {
 	StyledLabel,
 	StyledFromGroup,
 } from '../formStyle';
+import { ThemeContext } from 'styled-components';
 
 const validateEmail = (email: string) => {
 	var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -43,6 +44,10 @@ const FormField: SFC<FormFieldProps> = ({
 	// isTouched when the input is first focused
 	const [errorMessage, setErrorMessage] = useState('');
 
+	const themeContext = useContext(ThemeContext);
+
+	console.log('Current theme: ', themeContext);
+
 	const validateChange = (event: any): void => {
 		const cleanErrorMessage = () => {
 			setErrorMessage('');
@@ -72,7 +77,7 @@ const FormField: SFC<FormFieldProps> = ({
 			case 'mail':
 				return 'Saisissez votre adresse e-mail';
 			case 'password':
-				return '&#8226;&#8226;&#8226;&#8226;&#8226;';
+				return '••••••';
 			default:
 				return '';
 		}
