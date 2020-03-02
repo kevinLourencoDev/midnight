@@ -1,4 +1,4 @@
-import React, { SFC } from 'react';
+import React, { FC } from 'react';
 
 import { StyledButton } from './buttonStyle';
 
@@ -8,7 +8,7 @@ export interface ButtonProps {
 	color?: string;
 }
 
-const Button: SFC<ButtonProps> = ({
+const Button: FC<ButtonProps> = ({
 	children,
 	onClick,
 	type = 'button',

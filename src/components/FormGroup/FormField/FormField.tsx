@@ -1,4 +1,4 @@
-import React, { useState, SFC } from 'react';
+import React, { useState, FC } from 'react';
 import { useId } from 'react-id-generator';
 import { validateEmail } from '../../../utils/validators';
 
@@ -22,7 +22,7 @@ export interface FormFieldProps {
 	required?: boolean;
 }
 
-const FormField: SFC<FormFieldProps> = ({
+const FormField: FC<FormFieldProps> = ({
 	name,
 	value,
 	placeholder,
