@@ -7,23 +7,13 @@
 ## Install
 
 ```bash
-npm install --save midnight
-
-or
-
-yarn add midnight
+npm install
 ```
 
 ## Usage
 
-```jsx
-import React from 'react'
-
-import { Demo } from 'midnight'
-
-const Example = ({message}) => <Demo type={'warning'}>{message}</Demo>;
-
-export default Example;
+```bash
+npm run doc:dev
 ```
 
 ## License
