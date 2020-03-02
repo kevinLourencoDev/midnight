@@ -1,22 +1,16 @@
-.App {
-  text-align: center;
+/* Should be a component in midnight */
+
+.card-container {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #09d3ac;
+.card {
+	max-width: 400px;
+	width: 100%;
+	padding: 16px;
+	border: 1px solid #efefef;
+	border-radius: 8px;
 }

@@ -1,29 +1,31 @@
 import React from 'react';
-import { FormField } from 'midnight_test';
-import logo from './logo.svg';
+import { FormField, Button, GlobalStyle } from 'midnight_test';
 import './App.css';
 const App: React.FC = () => {
 	return (
-		<div className='App'>
-			<header className='App-header'>
-				<img src={logo} className='App-logo' alt='logo' />
-				<FormField
-					label='to'
-					name='field1'
-					type='mail'
-					placeholder='test@test.com'
-					required
-				/>
+		<>
+			<GlobalStyle />
+			<div className='card-container'>
+				<div className='card'>
+					<FormField
+						label='to'
+						name='mail'
+						type='mail'
+						placeholder='test@test.com'
+						required
+					/>
 
-				<FormField
-					label='to'
-					name='field10'
-					type='mail'
-					placeholder='test@test.com'
-					required
-				/>
-			</header>
-		</div>
+					<FormField
+						label='password'
+						name='password'
+						type='password'
+						required
+					/>
+
+					<Button>Submit</Button>
+				</div>
+			</div>
+		</>
 	);
 };
 
