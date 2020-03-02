@@ -6,7 +6,7 @@ const StyledButton = styled.button`
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	border-radius: 4px;
+	border-radius: ${utils.globalborderRadius};
 	width: 100%;
 	height: ${utils.spacers[5]}; /* 5 x 8 = 40px */
 
@@ -38,6 +38,10 @@ const StyledButton = styled.button`
 		}
 
 		&:active {
+			background: linear-gradient(
+				rgba(8, 100, 207, 0.9),
+				${palette.primary.base}
+			);
 		}
 	}
 `;

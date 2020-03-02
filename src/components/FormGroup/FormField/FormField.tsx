@@ -33,18 +33,11 @@ const FormField: SFC<FormFieldProps> = ({
 	label,
 	required,
 }) => {
-	// Generate unique id for htmlFor label/input
-	const [htmlId] = useId();
-
-	// isTouched when the input is first focused
 	const [errorMessage, setErrorMessage] = useState('');
 
 	const validateChange = (event: any): void => {
-		const cleanErrorMessage = () => {
-			setErrorMessage('');
-		};
+		const cleanErrorMessage = () => setErrorMessage('');
 
-		// We make the verification only when we have blur at least one time
 		if (required === true) {
 			if (event.target.value === '') {
 				return setErrorMessage('Champs requis');
@@ -62,17 +55,19 @@ const FormField: SFC<FormFieldProps> = ({
 		}
 	};
 
-	// Define default placeholder
 	const defaultPlaceholder = (type: string): string => {
 		switch (type) {
 			case 'mail':
 				return 'Saisissez votre adresse e-mail';
 			case 'password':
-				return '••••••';
+				return '••••••'; // Not so accessible in terme of UX in my opinion.
 			default:
 				return '';
 		}
 	};
+
+	// Generate unique id for htmlFor label/input interaction
+	const [htmlId] = useId();
 
 	return (
 		<StyledFromGroup>

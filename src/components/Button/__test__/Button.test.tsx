@@ -32,16 +32,14 @@ describe('Button', () => {
 
 		const button = Enzyme.shallow(<Button onClick={mockHandleClick} />);
 
-		button
-			.find('[type="button"]')
-			.simulate('click', { target: { value: 'test@test.com' } });
+		button.find('[type="button"]').simulate('click');
 		expect(mockHandleClick.mock.calls.length).toEqual(1);
 	});
 
 	it('Button without type should have default type to be button', () => {
 		const button = Enzyme.shallow(<Button>test type</Button>);
 
-		expect(button.find('[type="button"]').text()).toEqual('test type');
+		expect(button.find('[type="button"]').exists()).toBe(true);
 	});
 
 	it('Button with type should have this given type', () => {
@@ -53,15 +51,13 @@ describe('Button', () => {
 	});
 
 	it('Button without color should have default color to be primary', () => {
-		const button = Enzyme.shallow(<Button>test type</Button>);
+		const button = Enzyme.shallow(<Button>test color</Button>);
 
 		expect(button.find('[type="button"]').prop('color')).toEqual('primary');
 	});
 
 	it('Button with color should have this given color', () => {
-		const button = Enzyme.shallow(
-			<Button color='light'>test type submit</Button>
-		);
+		const button = Enzyme.shallow(<Button color='light'>test color</Button>);
 
 		expect(button.find('[color="light"]').exists()).toBe(true);
 	});

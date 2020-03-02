@@ -50,12 +50,7 @@ describe('FormField', () => {
 			expect(wrapper.contains('Champs requis')).toBe(false);
 		});
 
-		it('matches snapshot', () => {
-			const tree = renderer.create(<FormField />).toJSON();
-			expect(tree).toMatchSnapshot();
-		});
-
-		it('FormField with placeholder shoud have his own placeholder', () => {
+		it('FormField with placeholder should have his own placeholder', () => {
 			const wrapper = Enzyme.shallow(
 				<FormField placeholder='test placeholder' />
 			);
@@ -65,16 +60,21 @@ describe('FormField', () => {
 			);
 		});
 
-		it('FormField without placeholder shoud not have his own placeholder', () => {
+		it('FormField without placeholder should have empty placeholder', () => {
 			const wrapper = Enzyme.shallow(<FormField />);
 
 			expect(wrapper.find('#i').prop('placeholder')).toEqual('');
 		});
 
-		it('Form Fied have an hintText attribute have to show it', () => {
+		it('Form Fied with an hintText attribute should show it', () => {
 			const wrapper = Enzyme.shallow(<FormField hintText='test hint' />);
 
 			expect(wrapper.contains('test hint')).toBe(true);
+		});
+
+		it('matches snapshot', () => {
+			const tree = renderer.create(<FormField />).toJSON();
+			expect(tree).toMatchSnapshot();
 		});
 	});
 
@@ -86,7 +86,7 @@ describe('FormField', () => {
 			ReactDom.unmountComponentAtNode(div);
 		});
 
-		it('Form Fied handleChange must be called when input change', () => {
+		it('FormField handleChange should be called when input onblur', () => {
 			const mockHandleChange = jest.fn(() => true);
 
 			const input = Enzyme.shallow(
@@ -96,14 +96,14 @@ describe('FormField', () => {
 			expect(mockHandleChange.mock.calls.length).toEqual(1);
 		});
 
-		it('Form Fied have to show an error when mail is wrong', () => {
+		it('FormField have to show an error when mail is wrong', () => {
 			const wrapper = Enzyme.shallow(<FormField type='mail' />);
 			wrapper.find('#i').simulate('blur', { target: { value: 'notamail' } });
 
 			expect(wrapper.contains('Email invalide')).toBe(true);
 		});
 
-		it('Form Fied have to not show an error when mail is correct', () => {
+		it('FormField have to not show an error when mail is correct', () => {
 			const wrapper = Enzyme.shallow(<FormField type='mail' />);
 			wrapper
 				.find('#i')
@@ -142,13 +142,13 @@ describe('FormField', () => {
 			ReactDom.unmountComponentAtNode(div);
 		});
 
-		it('FormField password without placeholder shoud have a default one', () => {
+		it('FormField password without placeholder should have a default one', () => {
 			const wrapper = Enzyme.shallow(<FormField type='password' />);
 
 			expect(wrapper.find('#i').prop('placeholder')).toEqual('••••••');
 		});
 
-		it('FormField password with placeholder shoud have his own placeholder', () => {
+		it('FormField password with placeholder should have his own placeholder', () => {
 			const wrapper = Enzyme.shallow(
 				<FormField type='password' placeholder='test enter password' />
 			);
