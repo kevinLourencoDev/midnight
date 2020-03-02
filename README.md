@@ -16,6 +16,14 @@ npm install --save midnight
 npm run doc:dev
 ```
 
+## Midnight in a project
+
+Go to example dir and :
+
+```bash
+npm run start
+```
+
 ## License
 
 MIT © [klourencodev@gmail.com](https://github.com/klourencodev@gmail.com)
