@@ -7,10 +7,10 @@
 ## Install
 
 ```bash
-npm install
+npm install --save midnight
 ```
 
-## Usage
+## Internal doc
 
 ```bash
 npm run doc:dev
