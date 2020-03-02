@@ -1,6 +1,7 @@
 {
 	"types": ["@emotion/core", "node"],
 	"compilerOptions": {
+		"baseUrl": "src",
 		"outDir": "dist",
 		"module": "commonjs",
 		"target": "es5",

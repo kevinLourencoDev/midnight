@@ -1,26 +1,68 @@
 import React from 'react';
 import ReactDom from 'react-dom';
-import { render, cleanup } from '@testing-library/react';
+import { cleanup } from '@testing-library/react';
 import renderer from 'react-test-renderer';
+import Enzyme from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+
+Enzyme.configure({ adapter: new Adapter() });
 
 import '@testing-library/jest-dom/extend-expect';
+
+afterEach(cleanup);
 
 import Button from '../Button';
 
 afterEach(cleanup);
 
-it('renders without crashing', () => {
-	const div: HTMLDivElement = document.createElement('div');
-	ReactDom.render(<Button />, div);
-	ReactDom.unmountComponentAtNode(div);
-});
+describe('Button', () => {
+	it('renders without crashing', () => {
+		const div: HTMLDivElement = document.createElement('div');
+		ReactDom.render(<Button />, div);
+		ReactDom.unmountComponentAtNode(div);
+	});
 
-it('render Demo Component correctly', () => {
-	const { getByTestId } = render(<Button />);
-	expect(getByTestId('DemoMessage')).toHaveTextContent('Hello World');
-});
+	it('matches snapshot', () => {
+		const tree = renderer.create(<Button />).toJSON();
+		expect(tree).toMatchSnapshot();
+	});
 
-it('matches snapshot', () => {
-	const tree = renderer.create(<Button />).toJSON();
-	expect(tree).toMatchSnapshot();
+	it('Button onClick must be called when button is clicked', () => {
+		const mockHandleClick = jest.fn(() => true);
+
+		const button = Enzyme.shallow(<Button onClick={mockHandleClick} />);
+
+		button
+			.find('[type="button"]')
+			.simulate('click', { target: { value: 'test@test.com' } });
+		expect(mockHandleClick.mock.calls.length).toEqual(1);
+	});
+
+	it('Button without type should have default type to be button', () => {
+		const button = Enzyme.shallow(<Button>test type</Button>);
+
+		expect(button.find('[type="button"]').text()).toEqual('test type');
+	});
+
+	it('Button with type should have this given type', () => {
+		const button = Enzyme.shallow(
+			<Button type='submit'>test type submit</Button>
+		);
+
+		expect(button.find('[type="submit"]').exists()).toBe(true);
+	});
+
+	it('Button without color should have default color to be primary', () => {
+		const button = Enzyme.shallow(<Button>test type</Button>);
+
+		expect(button.find('[type="button"]').prop('color')).toEqual('primary');
+	});
+
+	it('Button with color should have this given color', () => {
+		const button = Enzyme.shallow(
+			<Button color='light'>test type submit</Button>
+		);
+
+		expect(button.find('[color="light"]').exists()).toBe(true);
+	});
 });

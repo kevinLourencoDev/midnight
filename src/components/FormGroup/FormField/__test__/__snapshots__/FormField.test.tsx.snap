@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormField FormField common test matches snapshot 1`] = `
+<div
+  className="sc-bdVaJa eYxSpF"
+>
+  <label
+    className="sc-bxivhb bLTrWe"
+    htmlFor="i"
+  />
+  <input
+    className="sc-ifAKCX cKjkbQ"
+    id="i"
+    onBlur={[Function]}
+    placeholder=""
+    type="text"
+  />
+  
+</div>
+`;
+
+exports[`FormField FormField mail test matches snapshot 1`] = `
+<div
+  className="sc-bdVaJa eYxSpF"
+>
+  <label
+    className="sc-bxivhb bLTrWe"
+    htmlFor="i"
+  />
+  <input
+    className="sc-ifAKCX cKjkbQ"
+    id="i"
+    onBlur={[Function]}
+    placeholder="Saisissez votre adresse e-mail"
+    type="mail"
+  />
+  
+</div>
+`;
+
+exports[`FormField FormField password test matches snapshot 1`] = `
+<div
+  className="sc-bdVaJa eYxSpF"
+>
+  <label
+    className="sc-bxivhb bLTrWe"
+    htmlFor="i"
+  />
+  <input
+    className="sc-ifAKCX cKjkbQ"
+    id="i"
+    onBlur={[Function]}
+    placeholder="••••••"
+    type="password"
+  />
+  
+</div>
+`;

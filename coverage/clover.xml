@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1583121979489" clover="3.2.0">
+  <project timestamp="1583121979489" name="All files">
+    <metrics statements="78" coveredstatements="78" conditionals="38" coveredconditionals="38" methods="7" coveredmethods="7" elements="123" coveredelements="123" complexity="0" loc="78" ncloc="78" packages="6" files="10" classes="10"/>
+    <package name="components.Button">
+      <metrics statements="14" coveredstatements="14" conditionals="6" coveredconditionals="6" methods="1" coveredmethods="1"/>
+      <file name="Button.tsx" path="/www/Projet-test/Paynew-login/midnight/src/components/Button/Button.tsx">
+        <metrics statements="9" coveredstatements="9" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="7" type="stmt"/>
+        <line num="13" count="7" type="stmt"/>
+        <line num="14" count="14" type="cond" truecount="2" falsecount="0"/>
+        <line num="15" count="14" type="cond" truecount="2" falsecount="0"/>
+        <line num="17" count="7" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+      </file>
+      <file name="buttonStyle.tsx" path="/www/Projet-test/Paynew-login/midnight/src/components/Button/buttonStyle.tsx">
+        <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="5" count="1" type="cond" truecount="2" falsecount="0"/>
+        <line num="45" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.FormGroup">
+      <metrics statements="9" coveredstatements="9" conditionals="10" coveredconditionals="10" methods="0" coveredmethods="0"/>
+      <file name="formStyle.tsx" path="/www/Projet-test/Paynew-login/midnight/src/components/FormGroup/formStyle.tsx">
+        <metrics statements="9" coveredstatements="9" conditionals="10" coveredconditionals="10" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="5" count="1" type="cond" truecount="2" falsecount="0"/>
+        <line num="11" count="1" type="cond" truecount="2" falsecount="0"/>
+        <line num="16" count="1" type="cond" truecount="2" falsecount="0"/>
+        <line num="22" count="1" type="cond" truecount="2" falsecount="0"/>
+        <line num="31" count="1" type="cond" truecount="2" falsecount="0"/>
+        <line num="49" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.FormGroup.FormField">
+      <metrics statements="36" coveredstatements="36" conditionals="22" coveredconditionals="22" methods="5" coveredmethods="5"/>
+      <file name="FormField.tsx" path="/www/Projet-test/Paynew-login/midnight/src/components/FormGroup/FormField/FormField.tsx">
+        <metrics statements="36" coveredstatements="36" conditionals="22" coveredconditionals="22" methods="5" coveredmethods="5"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="26" count="24" type="stmt"/>
+        <line num="27" count="24" type="stmt"/>
+        <line num="28" count="24" type="stmt"/>
+        <line num="29" count="24" type="stmt"/>
+        <line num="30" count="48" type="cond" truecount="2" falsecount="0"/>
+        <line num="31" count="24" type="stmt"/>
+        <line num="32" count="24" type="stmt"/>
+        <line num="33" count="24" type="stmt"/>
+        <line num="34" count="24" type="stmt"/>
+        <line num="37" count="24" type="stmt"/>
+        <line num="40" count="24" type="stmt"/>
+        <line num="42" count="24" type="stmt"/>
+        <line num="43" count="6" type="stmt"/>
+        <line num="44" count="3" type="stmt"/>
+        <line num="48" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="49" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="50" count="1" type="stmt"/>
+        <line num="52" count="1" type="stmt"/>
+        <line num="56" count="5" type="cond" truecount="2" falsecount="0"/>
+        <line num="57" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="58" count="1" type="stmt"/>
+        <line num="60" count="2" type="stmt"/>
+        <line num="66" count="24" type="stmt"/>
+        <line num="67" count="21" type="stmt"/>
+        <line num="69" count="9" type="stmt"/>
+        <line num="71" count="3" type="stmt"/>
+        <line num="73" count="9" type="stmt"/>
+        <line num="77" count="24" type="stmt"/>
+        <line num="87" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="88" count="6" type="stmt"/>
+        <line num="99" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="styles.midnight-light">
+      <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="_palette.tsx" path="/www/Projet-test/Paynew-login/midnight/src/styles/midnight-light/_palette.tsx">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="20" count="2" type="stmt"/>
+        <line num="28" count="2" type="stmt"/>
+        <line num="34" count="2" type="stmt"/>
+      </file>
+      <file name="_theming.tsx" path="/www/Projet-test/Paynew-login/midnight/src/styles/midnight-light/_theming.tsx">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+      </file>
+      <file name="_typography.tsx" path="/www/Projet-test/Paynew-login/midnight/src/styles/midnight-light/_typography.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="44" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="styles.utils">
+      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="_spacers.tsx" path="/www/Projet-test/Paynew-login/midnight/src/styles/utils/_spacers.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+      </file>
+      <file name="_utils.tsx" path="/www/Projet-test/Paynew-login/midnight/src/styles/utils/_utils.tsx">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="utils">
+      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="validators.tsx" path="/www/Projet-test/Paynew-login/midnight/src/utils/validators.tsx">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>

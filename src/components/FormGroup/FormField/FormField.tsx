@@ -1,5 +1,6 @@
-import React, { useState, SFC, useContext } from 'react';
+import React, { useState, SFC } from 'react';
 import { useId } from 'react-id-generator';
+import { validateEmail } from '../../../utils/validators';
 
 import {
 	StyledText,
@@ -8,12 +9,6 @@ import {
 	StyledLabel,
 	StyledFromGroup,
 } from '../formStyle';
-import { ThemeContext } from 'styled-components';
-
-const validateEmail = (email: string) => {
-	var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-	return re.test(String(email).toLowerCase());
-};
 
 export interface FormFieldProps {
 	name?: string;
@@ -37,16 +32,12 @@ const FormField: SFC<FormFieldProps> = ({
 	disabled,
 	label,
 	required,
-}: FormFieldProps) => {
+}) => {
 	// Generate unique id for htmlFor label/input
 	const [htmlId] = useId();
 
 	// isTouched when the input is first focused
 	const [errorMessage, setErrorMessage] = useState('');
-
-	const themeContext = useContext(ThemeContext);
-
-	console.log('Current theme: ', themeContext);
 
 	const validateChange = (event: any): void => {
 		const cleanErrorMessage = () => {
@@ -92,7 +83,7 @@ const FormField: SFC<FormFieldProps> = ({
 				type={type}
 				value={value}
 				placeholder={placeholder ? placeholder : defaultPlaceholder(type)}
-				onBlur={() => {
+				onBlur={(event) => {
 					handleChange ? handleChange(event) : null;
 					validateChange(event);
 				}}
@@ -105,4 +96,4 @@ const FormField: SFC<FormFieldProps> = ({
 	);
 };
 
-export default FormField as React.ComponentType<FormFieldProps>;
+export default FormField;

@@ -21,7 +21,7 @@ const StyledButton = styled.button`
 		outline: none;
 	}
 
-	&.primary {
+	&[color='primary'] {
 		background-color: ${palette.primary.base};
 		border: solid 1px ${palette.primary.base};
 		color: ${palette.neutral.lighter};

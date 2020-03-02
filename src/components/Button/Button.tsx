@@ -15,7 +15,7 @@ const Button: SFC<ButtonProps> = ({
 	color = 'primary',
 }) => {
 	return (
-		<StyledButton onClick={onClick} type={type} className={color}>
+		<StyledButton onClick={onClick} type={type} color={color}>
 			{children}
 		</StyledButton>
 	);
